@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { NextSeo } from "next-seo"
 
-function Home({ store }) {
+function Home() {
   const imageUrl =
   process.env.NEXT_PUBLIC_BASE_URL +
   '/api/og'
@@ -138,27 +138,6 @@ function Home({ store }) {
   );
 }
 
-export async function getServerSideProps() {
-  const body = {
-    inputData: {
-      storeslug: "rose-fast-food",
-      product_Id: "6183775",
-    },
-  };
-
-  const response = await axios.post(
-    "https://webservice.dineapi.com/api/dine/storedata",
-    body
-  );
-
-  console.log(response?.store, "store");
-
-  return {
-    props: {
-      store: data.store,
-    },
-  };
-}
 
 export default Home;
 
