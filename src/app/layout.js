@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
   const imageUrl =
-  process.env.NEXT_PUBLIC_BASE_URL +
+  "https://main--next-seo-test.netlify.app" +
   '/api/og'
 
   return (
