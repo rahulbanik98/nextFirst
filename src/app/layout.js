@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://google.com" />
+        <meta property="og:url" content="https://kuick.com" />
         <meta
           property="og:title"
           content="Rose Fast Food
@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:url" content="https://kuick.com/" />
         <meta
           property="twitter:title"
           content="Rose Fast Food
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/images/meta-tags.png"
+          content={imageUrl}
         />
       </head>
       <body className={inter.className}>{children}</body>
