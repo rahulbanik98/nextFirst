@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -9,9 +10,63 @@ const inter = Inter({ subsets: ['latin'] })
 // }
 
 export default function RootLayout({ children }) {
+  const imageUrl =
+  process.env.NEXT_PUBLIC_BASE_URL +
+  '/api/og'
+
   return (
+    <>
+     
     <html lang="en">
+    <head>
+        <title>{}</title>
+        <meta
+          name="title"
+          content="Rose Fast Food"
+        />
+        <meta
+          name="description"
+          content="We aim to bring all of our customers the best value for money, services and food around."
+        />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://google.com" />
+        <meta
+          property="og:title"
+          content="Rose Fast Food
+"
+        />
+        <meta
+          property="og:description"
+          content="We aim to bring all of our customers the best value for money, services and food around.
+"
+        />
+        <meta
+          property="og:image"
+          content={imageUrl}
+        />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta
+          property="twitter:title"
+          content="Rose Fast Food
+"
+        />
+        <meta
+          property="twitter:description"
+          content="We aim to bring all of our customers the best value for money, services and food around.
+"
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
+    </>
   )
 }

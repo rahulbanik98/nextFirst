@@ -35,6 +35,8 @@ export async function GET() {
 
     const data = await res.json();
 
+    console.log(data,"data")
+
     return new ImageResponse(
       (
         <div
@@ -65,8 +67,6 @@ export async function GET() {
               style={{ margin: "0 30px" }}
             />
           </div>
-          <div>{data?.store?.store_Name}</div>
-          <div>{data?.store?.store_Banner}</div>
         </div>
       ),
       {
