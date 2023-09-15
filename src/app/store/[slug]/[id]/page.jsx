@@ -1,7 +1,7 @@
 import React from "react";
 // import { getPostBySlug } from "@/app/api/getData";
 
-export default async function Page({ params }) {
+export default  function Page() {
   //   const data = await  getPostBySlug();
 
   // const data = await fetch(
@@ -39,6 +39,7 @@ export default async function Page({ params }) {
       alt={data1?.store?.store_Name}
       src={data1?.store?.store_Banner_Image}
       /> */}
+      <div>Testing seo</div>
     </div>
   );
 }
