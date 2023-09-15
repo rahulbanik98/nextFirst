@@ -36,6 +36,7 @@ export default async function Page({ params }) {
       <div>{data1?.store?.store_Name}</div>
       <div>{ data1?.store?.store_Banner }</div>
       <img 
+      alt={data1?.store?.store_Name}
       src={data1?.store?.store_Banner_Image}
       />
     </div>
